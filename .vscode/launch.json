@@ -1,0 +1,73 @@
+{
+	// IntelliSense を使用して利用可能な属性を学べます。
+	// 既存の属性の説明をホバーして表示します。
+	// 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(Windows) 接続",
+			"type": "cppvsdbg",
+			"request": "attach",
+			"processId": "${command:pickProcess}"
+		},
+		{
+			"name": "(Windows) 起動",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "プログラム名を入力してください (例: ${workspaceFolder}/a.exe)",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"console": "externalTerminal"
+		},
+		{
+			"name": "(gdb) 起動",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "プログラム名を入力してください (例: ${workspaceFolder}/a.exe)",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"miDebuggerPath": "/path/to/gdb",
+			"setupCommands": [
+				{
+					"description": "gdb の再フォーマットを有効にする",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		},
+		{
+			"name": "(gdb) 接続",
+			"type": "cppdbg",
+			"request": "attach",
+			"program": "プログラム名を入力してください (例: ${workspaceFolder}/a.exe)",
+			"processId": "${command:pickProcess}",
+			"MIMode": "gdb",
+			"miDebuggerPath": "/path/to/gdb",
+			"setupCommands": [
+				{
+					"description": "gdb の再フォーマットを有効にする",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				}
+			]
+		},
+		
+		{
+			"name": "(Windows) 起動",
+			"type": "cppvsdbg",
+			"request": "launch",
+			"program": "プログラム名を入力してください (例: ${workspaceFolder}/a.exe)",
+			"args": [],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"console": "externalTerminal"
+		}
+	]
+}
